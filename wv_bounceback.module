@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the WorldVision Bounceback feature.
+ */
+
+include_once 'wv_bounceback.features.inc';
