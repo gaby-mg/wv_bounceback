@@ -251,7 +251,7 @@ function wv_bounceback_field_default_field_instances() {
     ),
     'entity_type' => 'commerce_line_item',
     'field_name' => 'field_wv_bb_line_predet_texts',
-    'label' => 'Bounceback Predefined Texts',
+    'label' => 'Elige el texto para tu felicitación de Navidad',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -286,7 +286,7 @@ function wv_bounceback_field_default_field_instances() {
     ),
     'entity_type' => 'commerce_line_item',
     'field_name' => 'field_wv_bounceback_text',
-    'label' => 'Bounceback Text',
+    'label' => 'Este es el texto elegido',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -935,11 +935,11 @@ function wv_bounceback_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Bounceback Predefined Texts');
   t('Bounceback Reference');
-  t('Bounceback Text');
   t('Child Reference');
   t('Display path');
+  t('Elige el texto para tu felicitación de Navidad');
+  t('Este es el texto elegido');
   t('Imagen Contraportada');
   t('Imagen Interior (Front-End)');
   t('Imagen Portada');
