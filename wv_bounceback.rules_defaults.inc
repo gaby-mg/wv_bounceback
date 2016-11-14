@@ -99,7 +99,13 @@ function wv_bounceback_default_rules_configuration() {
         }
       ],
       "DO" : [
-        { "commerce_rules_extra_change_pane" : { "pane_id" : "checkout_donate", "page_id" : "review", "enabled" : "1" } }
+        { "commerce_rules_extra_change_pane" : {
+            "pane_id" : "checkout_donate",
+            "page_id" : "review",
+            "enabled" : "1",
+            "weight" : "10"
+          }
+        }
       ]
     }
   }');
