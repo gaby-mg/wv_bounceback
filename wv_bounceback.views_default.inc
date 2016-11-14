@@ -22,7 +22,7 @@ function wv_bounceback_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Bounceback';
+  $handler->display->display_options['title'] = 'Felicitación Navideña';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -33,14 +33,25 @@ function wv_bounceback_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['view_mode'] = 'full';
-  $handler->display->display_options['row_options']['links'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Header: Global: Unfiltered text */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<p>Se acerca la Navidad y con ella <strong>la ilusión de los niños apadrinados por recibir la felicitación</strong> de su padrino.</p>
+
+<p>Para que puedas compartir esta ilusión, <strong>te invitamos a que mandes esta tarjeta de felicitación de Navidad,</strong> en la que puedes escribir tu mensaje con el que harás que tu niño apadrinado se sienta aún más cerca de ti.</p>';
+  /* Field: Content: Bounceback Reference */
+  $handler->display->display_options['fields']['field_wv_bounceback_reference']['id'] = 'field_wv_bounceback_reference';
+  $handler->display->display_options['fields']['field_wv_bounceback_reference']['table'] = 'field_data_field_wv_bounceback_reference';
+  $handler->display->display_options['fields']['field_wv_bounceback_reference']['field'] = 'field_wv_bounceback_reference';
+  $handler->display->display_options['fields']['field_wv_bounceback_reference']['label'] = '';
+  $handler->display->display_options['fields']['field_wv_bounceback_reference']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_wv_bounceback_reference']['type'] = 'commerce_product_reference_rendered_product';
+  $handler->display->display_options['fields']['field_wv_bounceback_reference']['settings'] = array(
+    'view_mode' => 'full',
+    'page' => 1,
+  );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -69,13 +80,16 @@ function wv_bounceback_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'devel';
   $translatables['wv_bounceback'] = array(
     t('Master'),
-    t('Bounceback'),
+    t('Felicitación Navideña'),
     t('more'),
     t('Apply'),
     t('Reset'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('<p>Se acerca la Navidad y con ella <strong>la ilusión de los niños apadrinados por recibir la felicitación</strong> de su padrino.</p>
+
+<p>Para que puedas compartir esta ilusión, <strong>te invitamos a que mandes esta tarjeta de felicitación de Navidad,</strong> en la que puedes escribir tu mensaje con el que harás que tu niño apadrinado se sienta aún más cerca de ti.</p>'),
     t('Page'),
   );
   $export['wv_bounceback'] = $view;
@@ -165,7 +179,7 @@ function wv_bounceback_views_default_views() {
   $handler->display->display_options['fields']['field_imagen_trasera_front_end_']['settings'] = array(
     'file_view_mode' => 'full',
   );
-  /* Field: Commerce Line item: Bounceback Text */
+  /* Field: Commerce Line item: Este es el texto elegido */
   $handler->display->display_options['fields']['field_wv_bounceback_text']['id'] = 'field_wv_bounceback_text';
   $handler->display->display_options['fields']['field_wv_bounceback_text']['table'] = 'field_data_field_wv_bounceback_text';
   $handler->display->display_options['fields']['field_wv_bounceback_text']['field'] = 'field_wv_bounceback_text';
@@ -197,12 +211,12 @@ function wv_bounceback_views_default_views() {
   $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['relationship'] = 'field_child_reference_product_id';
   $handler->display->display_options['fields']['field_first_name']['label'] = 'Para';
-  /* Field: User: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'users';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['name']['label'] = 'De';
+  /* Field: Field: Nombre */
+  $handler->display->display_options['fields']['field_first_name_1']['id'] = 'field_first_name_1';
+  $handler->display->display_options['fields']['field_first_name_1']['table'] = 'field_data_field_first_name';
+  $handler->display->display_options['fields']['field_first_name_1']['field'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name_1']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['field_first_name_1']['label'] = 'De';
   /* Sort criterion: Commerce Line Item: Line item ID */
   $handler->display->display_options['sorts']['line_item_id']['id'] = 'line_item_id';
   $handler->display->display_options['sorts']['line_item_id']['table'] = 'commerce_line_item';
