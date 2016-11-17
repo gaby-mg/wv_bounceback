@@ -277,7 +277,7 @@ function wv_bounceback_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -287,7 +287,7 @@ function wv_bounceback_field_default_field_instances() {
     'entity_type' => 'commerce_line_item',
     'field_name' => 'field_wv_bounceback_text',
     'label' => 'Este es el texto elegido',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -296,6 +296,10 @@ function wv_bounceback_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'maxlength_js' => 295,
+        'maxlength_js_enforce' => 1,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 1,
         'rows' => 5,
       ),
       'type' => 'text_textarea',
