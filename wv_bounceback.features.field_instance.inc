@@ -47,7 +47,7 @@ function wv_bounceback_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 3,
     ),
   );
 
@@ -103,7 +103,7 @@ function wv_bounceback_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'commerce_product_reference_autocomplete',
-      'weight' => 0,
+      'weight' => 4,
     ),
   );
 
@@ -164,7 +164,7 @@ function wv_bounceback_field_default_field_instances() {
         'currency_code' => 'default',
       ),
       'type' => 'commerce_price_full',
-      'weight' => 1,
+      'weight' => 5,
     ),
   );
 
@@ -226,13 +226,13 @@ function wv_bounceback_field_default_field_instances() {
         'currency_code' => 'default',
       ),
       'type' => 'commerce_price_full',
-      'weight' => 0,
+      'weight' => 2,
     ),
   );
 
   // Exported field_instance:
-  // 'commerce_line_item-wv_bounceback-field_wv_bb_line_predet_texts'.
-  $field_instances['commerce_line_item-wv_bounceback-field_wv_bb_line_predet_texts'] = array(
+  // 'commerce_line_item-wv_bounceback-field_wv_bb_predet_texts'.
+  $field_instances['commerce_line_item-wv_bounceback-field_wv_bb_predet_texts'] = array(
     'bundle' => 'wv_bounceback',
     'commerce_cart_settings' => array(
       'field_access' => 1,
@@ -242,16 +242,16 @@ function wv_bounceback_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 6,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'commerce_line_item',
-    'field_name' => 'field_wv_bb_line_predet_texts',
-    'label' => 'Elige el texto para tu felicitación de Navidad',
+    'field_name' => 'field_wv_bb_predet_texts',
+    'label' => 'Bounceback Predefined Texts',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -261,7 +261,7 @@ function wv_bounceback_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 2,
+      'weight' => 6,
     ),
   );
 
@@ -303,7 +303,7 @@ function wv_bounceback_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 7,
     ),
   );
 
@@ -939,10 +939,10 @@ function wv_bounceback_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Bounceback Predefined Texts');
   t('Bounceback Reference');
   t('Child Reference');
   t('Display path');
-  t('Elige el texto para tu felicitación de Navidad');
   t('Este es el texto elegido');
   t('Imagen Contraportada');
   t('Imagen Interior (Front-End)');
