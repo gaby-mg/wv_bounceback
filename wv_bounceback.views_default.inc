@@ -167,6 +167,13 @@ function wv_bounceback_views_default_views() {
   $handler->display->display_options['fields']['field_imagen_interior_front_end_']['settings'] = array(
     'file_view_mode' => 'default',
   );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Este pequeño pasatiempo acompañará a tu felicitación navideña para que tu niñ@ apadrinad@ pueda jugar cuando la reciba.';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Commerce Product: Imagen Trasera (Front-End) */
   $handler->display->display_options['fields']['field_imagen_trasera_front_end_']['id'] = 'field_imagen_trasera_front_end_';
   $handler->display->display_options['fields']['field_imagen_trasera_front_end_']['table'] = 'field_data_field_imagen_trasera_front_end_';
@@ -252,6 +259,7 @@ function wv_bounceback_views_default_views() {
     t('Products referenced by field_child_reference'),
     t('Order owner'),
     t('User Profile'),
+    t('Este pequeño pasatiempo acompañará a tu felicitación navideña para que tu niñ@ apadrinad@ pueda jugar cuando la reciba.'),
     t('[field_wv_bounceback_text-value]'),
     t('Para'),
     t('De'),
