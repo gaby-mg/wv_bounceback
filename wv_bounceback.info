@@ -1,7 +1,7 @@
 name = WorldVision Bounceback
 core = 7.x
 package = WorldVision
-version = 7.x-1.0-beta8
+version = 7.x-1.0-beta9
 dependencies[] = commerce_autosku
 dependencies[] = commerce_cart
 dependencies[] = commerce_features
