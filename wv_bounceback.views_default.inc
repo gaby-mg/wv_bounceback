@@ -33,6 +33,7 @@ function wv_bounceback_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['view_mode'] = 'full';
+  $handler->display->display_options['row_options']['links'] = FALSE;
   /* Header: Global: Unfiltered text */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
@@ -245,6 +246,13 @@ function wv_bounceback_views_default_views() {
   $handler->display->display_options['filters']['product_line_item_type']['relationship'] = 'commerce_line_items_line_item_id';
   $handler->display->display_options['filters']['product_line_item_type']['value'] = '1';
   $handler->display->display_options['filters']['product_line_item_type']['group'] = 0;
+
+  /* Display: PDF Page */
+  $handler = $view->new_display('pdf', 'PDF Page', 'pdf_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'pdf_unformatted';
+  $handler->display->display_options['row_plugin'] = 'pdf_fields';
+  $handler->display->display_options['path'] = 'bouncebackpdf';
   $translatables['wv_bounceback_summary'] = array(
     t('Defaults'),
     t('Shopping cart'),
@@ -264,6 +272,7 @@ function wv_bounceback_views_default_views() {
     t('Para'),
     t('De'),
     t('All'),
+    t('PDF Page'),
   );
   $export['wv_bounceback_summary'] = $view;
 
