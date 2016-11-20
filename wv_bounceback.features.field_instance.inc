@@ -298,7 +298,7 @@ function wv_bounceback_field_default_field_instances() {
       'settings' => array(
         'maxlength_js' => 295,
         'maxlength_js_enforce' => 1,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_label' => '<strong>@remaining</strong> caracteres restantes, de @limit posibles',
         'maxlength_js_truncate_html' => 1,
         'rows' => 5,
       ),
@@ -588,10 +588,12 @@ function wv_bounceback_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
         'weight' => 4,
       ),
       'line_item' => array(
@@ -845,10 +847,9 @@ function wv_bounceback_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
